@@ -2,56 +2,73 @@ package com.softserve.dimoybiyca.MVCApp2.DAO;
 
 import com.softserve.dimoybiyca.MVCApp2.models.Book;
 import com.softserve.dimoybiyca.MVCApp2.models.Person;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.sql.*;
 import java.util.List;
 
 @Component
 public class PersonDAO {
-    private final JdbcTemplate jdbcTemplate;
+    private final SessionFactory sessionFactory;
 
     @Autowired
-    public PersonDAO(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
+    public PersonDAO(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
     }
 
+    @Transactional(readOnly = true)
     public List<Person> index() {
-        return jdbcTemplate.query("SELECT * FROM project1.\"Person\"",
-                new BeanPropertyRowMapper<>(Person.class));
+        Session session = sessionFactory.getCurrentSession();
+
+        List<Person> people = session.createQuery("select p from Person p", Person.class)
+                .getResultList();
+
+        return people;
     }
 
+
+    @Transactional(readOnly = true)
     public Person show(int id) {
-        return jdbcTemplate.query("SELECT * FROM project1.\"Person\" WHERE id =?",
-                new Object[]{id},
-                new BeanPropertyRowMapper<>(Person.class))
-                .stream().findAny().orElse(null);
+        Session session = sessionFactory.getCurrentSession();
+
+        Person person = session.get(Person.class, id);
+
+        return person;
     }
 
+
+    @Transactional
     public void save(Person person) {
-       jdbcTemplate.update("INSERT INTO project1.\"Person\"(name, birthday) VALUES(?, ?)",
-               person.getName(),
-               person.getBirthday());
+        Session session = sessionFactory.getCurrentSession();
+
+        session.save(person);
     }
 
+    @Transactional
     public void update(int id, Person updatedPerson) {
-        jdbcTemplate.update("UPDATE project1.\"Person\" SET name=?, birthday=? WHERE id=?",
-                updatedPerson.getName(),
-                updatedPerson.getBirthday(),
-                id);
+        Session session = sessionFactory.getCurrentSession();
+
+        Person person = session.get(Person.class, id);
+        person.update(updatedPerson);
     }
 
+    @Transactional
     public void delete(int id) {
-        jdbcTemplate.update("DELETE FROM project1.\"Person\" WHERE id=?", id);
+        Session session = sessionFactory.getCurrentSession();
+
+        Person person = session.get(Person.class, id);
+        session.delete(person);
     }
 
+    @Transactional
     public List<Book> takenBooks(int id) {
-        return jdbcTemplate.query("SELECT project1.\"Book\".* FROM project1.\"Book\" JOIN project1.\"Person\"\n" +
-                "ON project1.\"Book\".\"ownerId\" = project1.\"Person\".\"id\" WHERE project1.\"Book\".\"ownerId\" = ?",
-                new Object[]{id},
-                new BeanPropertyRowMapper<>(Book.class));
+        Session session = sessionFactory.getCurrentSession();
+
+        Person person = session.get(Person.class, id);
+
+        return person.getBooks();
     }
 }

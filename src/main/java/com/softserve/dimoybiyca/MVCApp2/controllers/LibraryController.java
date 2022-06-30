@@ -100,7 +100,7 @@ public class LibraryController {
     @PatchMapping("/{id}/appoint")
     public String appoint(@PathVariable("id") int id,
                           @ModelAttribute("person") Person person) {
-        bookDAO.appoint(id, person.getId());
+        bookDAO.appoint(id, personDAO.show(person.getId()));
 
         return "redirect:/books/{id}";
     }
