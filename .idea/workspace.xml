@@ -9,21 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ece368c-71c3-4c93-99b1-3d38922bda68" name="Changes" comment="Electronic library">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties.origin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/DAO/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/DAO/BookDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/DAO/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/DAO/PersonDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/config/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/controllers/LibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/controllers/LibraryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database.properties.origin" beforeDir="false" />
-    </list>
+    <list default="true" id="3ece368c-71c3-4c93-99b1-3d38922bda68" name="Changes" comment="Updated to Hibernate" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,7 +186,7 @@
       <workItem from="1656249076627" duration="2939000" />
       <workItem from="1656252166362" duration="8498000" />
       <workItem from="1656504414849" duration="5944000" />
-      <workItem from="1656567892151" duration="2235000" />
+      <workItem from="1656567892151" duration="2548000" />
     </task>
     <task id="LOCAL-00001" summary="Electronic library">
       <created>1655998080929</created>
@@ -209,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655998080929</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated to Hibernate">
+      <created>1656570330859</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1656570330859</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +221,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Electronic library" />
-    <option name="LAST_COMMIT_MESSAGE" value="Electronic library" />
+    <MESSAGE value="Updated to Hibernate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated to Hibernate" />
   </component>
 </project>
