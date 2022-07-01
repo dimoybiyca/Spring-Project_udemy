@@ -9,7 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ece368c-71c3-4c93-99b1-3d38922bda68" name="Changes" comment="Updated to Hibernate" />
+    <list default="true" id="3ece368c-71c3-4c93-99b1-3d38922bda68" name="Changes" comment="Updated to Hibernate">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/controllers/LibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softserve/dimoybiyca/MVCApp2/controllers/LibraryController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,6 +191,9 @@
       <workItem from="1656252166362" duration="8498000" />
       <workItem from="1656504414849" duration="5944000" />
       <workItem from="1656567892151" duration="2548000" />
+      <workItem from="1656570516417" duration="2581000" />
+      <workItem from="1656673255854" duration="946000" />
+      <workItem from="1656674266148" duration="26000" />
     </task>
     <task id="LOCAL-00001" summary="Electronic library">
       <created>1655998080929</created>

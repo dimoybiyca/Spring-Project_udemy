@@ -28,8 +28,11 @@ public class LibraryController {
     @GetMapping()
     public String index(Model model) {
         model.addAttribute("books", bookDAO.index());
-
         return "books/index";
+    }
+
+    public int[] getXYPair(int x, int y) {
+        return new int[] {x, y};
     }
 
     @GetMapping("/{id}")
